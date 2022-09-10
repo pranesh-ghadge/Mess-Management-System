@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>IIITN Mess</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@700&family=Poppins:wght@700&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Merriweather+Sans:wght@700&family=Poppins:wght@700&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/3a4518f943.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- <link rel="stylesheet" href="styles/5star.css"> -->
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/main.css'>
+
+    <script src='/js/main.js'></script>
+</head>
+
+<body>
+    <!-- #Navbar-->
+    <%- include('partials/navbar')%>
+
+    <!-- //////////////////////Announcements/////////////////////             -->
+
+    <div class="heading">Upcoming Meal</div>
+
+    <!-- <div class="meal">
+        <div class="meal_image">
+            <img src="e_3_b.jpg" alt="">
+        </div>
+        <div class="meal_menu">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error laborum quos voluptatem velit, cupiditate numquam tempora, consequuntur mollitia soluta dolore molestiae non, voluptas adipisci? Iste velit eligendi quibusdam ratione maiores?</div>
+    </div> -->
+
+    <section>
+        <div class="container">
+            <div class="left"></div>
+            <div class="right">
+                <div class="content">
+                    <%for(let x of menuList){%>
+                    <h1><%=x.day%></h1>
+                    <h2><%=x.mealType%></h2>
+                    <br>
+                    <p>
+                        <% for (let dish of x.dishes) {%>
+                            <h4> <%= dish %> </h4>
+                        <% }  %> 
+                    </p>
+                    <!-- <a href="#" class="btn">Click Me</a> -->
+                    <%}%>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <hr class="hr_style">
+
+    <div class="heading">Announcements</div>
+
+
+    <div class="carousel" data-flickity='{ "groupCells": true }'>
+        <%for(let x of noticeList){%>
+        <div class="carousel-cell">
+            <div class="announce_title"><h3><%= x.heading %></h3></div>
+            <div class="announce_content"><h4><%= x.text %></h4></div>
+        </div>
+        <%}%>
+    </div>
+
+    <hr class="hr_style">
+    <div class="heading quote">Respect for food is a respect for life, for who we are and what we do
+            <br>
+        - Thomas Keller</div>
+    <!-- <div class="rating">
+        <div class="rating_text">Rate your recent meal</div>
+        <div class="rating_star">
+            <ul class="rate-area">
+                <input type="radio" id="5-star" name="rating" value="5" /><label for="5-star" title="Amazing">5
+                    stars</label>
+                <input type="radio" id="4-star" name="rating" value="4" /><label for="4-star" title="Good">4
+                    stars</label>
+                <input type="radio" id="3-star" name="rating" value="3" /><label for="3-star" title="Average">3
+                    stars</label>
+                <input type="radio" id="2-star" name="rating" value="2" /><label for="2-star" title="Not Good">2
+                    stars</label>
+                <input type="radio" id="1-star" name="rating" value="1" /><label for="1-star" title="Bad">1 star</label>
+            </ul>
+        </div>
+    </div> -->
+
+    <!-- <div class="footer_main"> -->
+    
+        <%- include('partials/footer')%>
+    <!-- </div> -->
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+
+</html>

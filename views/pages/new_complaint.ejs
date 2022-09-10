@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<%- include('partials/head')%>
+<script src="https://kit.fontawesome.com/3a4518f943.js" crossorigin="anonymous"></script> 
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <!-- #Navbar-->
+    <%- include('partials/navbar')%>
+
+    <div class="menu_day_list_container">
+        <div class="menu_day_list">
+            <ul>
+                <li><a href="../complaint/new">Create A New Complaint</a></li>
+                <li><a href="../complaint/track">Track your Complaint</a></li>
+    
+            </ul>
+        </div>
+    </div>
+
+    
+
+      <form action="/complaint" method="POST">
+        <div class="form_container">
+            <div class="form-section">
+                <label for="enrollment-number">Enrollment Number</label>
+                <input type="text" class="form-control" id="Enrollment_number" name="Enrollment_Number" placeholder="Enter your enrollment number" required>
+            </div>
+
+            <div class="form-section">
+                <label for="Email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email id" name="Email" id="Email" required>
+            </div>
+            <div class="form-section">
+                <label for="Complaint"><b>Enter your complaint</b></label>
+                <input type="text" placeholder="Describe here" name="Complaint" id="Complaint" required>
+            </div>
+
+            <div class="form-section">
+                <label for="complaint-tag">Select an appropriate tag for your complaint</label>
+                <select class="form-control" id="complaint-tag" name="category">
+                  <option>None of the these</option>
+                  <option>Menu Change</option>
+                  <option>Time issues</option>
+                  <option>Queue issues</option>
+                </select>
+              </div>
+
+            <div class="set-reset">
+                <input type="submit" value="Submit">
+                <!-- <input type="reset" value="Reset"> -->
+            </div>
+            <br>
+            <br>
+        </div>
+    </form>
+
+    <%- include('partials/footer')%>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

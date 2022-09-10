@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaints</title>
+    <link rel="stylesheet" href="/css/Complaint_new.css" />
+    <style>
+        .complaint{ display: flex; justify-content: space-between;}
+    </style>
+
+</head>
+<body>
+    <!-- #Navbar-->
+    
+    <h1> <%=category%>  Complaints </h1>
+    <ul>
+        <% for(let complaint of complaints) { %> 
+            <div class="complaint">
+                <p> <%= complaint.Enrollment_Number %> </p> 
+                <p> <%= complaint.Email %> </p>
+                <p> <%= complaint.Complaint %> </p>
+                <p> <%= complaint.category %> </p>
+                <p> <%= complaint.status %> </p>
+                <a href="/admin/complaint/<%=complaint._id%>/edit">Edit</a>
+            </div>
+            
+        <% } %> 
+    </ul>
+
+    <br>
+    <% if (category !=="All") {%> 
+    <a href="/admin/complaint"> All Complaints </a>
+    <% } %> 
+    
+</body>
+</html>

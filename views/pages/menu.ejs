@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Menu page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Merriweather+Sans:wght@700&family=Poppins:wght@700&display=swap');
+        </style>
+    <script src="https://kit.fontawesome.com/3a4518f943.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/main.css'>
+    <script src='/js/main.js'></script>
+</head>
+
+<body>
+    <!-- #Navbar-->
+    <%- include('partials/navbar')%>
+
+    <!-- //////////////////////CONTENT BODY OF MENU/////////////////////             -->
+    <div class="menu_day_list_container">
+        <div class="menu_day_list">
+            <ul>
+                <li><a href="#">Mon</a></li>
+                <li><a href="#">Tue</a></li>
+                <li><a href="#">Wed</a></li>
+                <li><a href="#">Thur</a></li>
+                <li><a href="#">Fri</a></li>
+                <li><a href="#">Sat</a></li>
+                <li><a href="#">Sun</a></li>
+    
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="breakfast">
+        <div class="menu_card_content">
+            <div class="menu_type_title"><h1>Breakfast</h1></div>
+            <div class="menu_content">
+                <ul>
+                    <li>Tea/Milk</li>
+                    <li>Bread + Butter + Jam</li>
+                    <li>Banana</li>
+                    <li>Vada + Sambhar</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="lunch">
+        <div class="menu_card_content">
+            <div class="menu_type_title"><h1>Lunch</h1></div>
+            <div class="menu_content">
+                <ul>
+                    <li>Baingan Bharta / Aalo Mutter</li>
+                    <li>Dal Makhani</li>
+                    <li>Plain Rice + Roti</li>
+                    <li>Salad</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="snacks">
+        <div class="menu_card_content">
+            <div class="menu_type_title"><h1>Snacks</h1></div>
+            <div class="menu_content">
+                <ul>
+                    <li>Pasta</li>
+                    <li>Coffee</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="dinner">
+        <div class="menu_card_content">
+            <div class="menu_type_title"><h1>Dinner</h1></div>
+            <div class="menu_content">
+                <ul>
+                    <li>Malai Kofta</li>
+                    <li>Plain Rice</li>
+                    <li>Salad + Shrikhand</li>
+                    <li>Toor Dal + Roti</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- <div class="footer_main"> -->
+        <%- include('partials/footer')%>
+</body>
+</html>

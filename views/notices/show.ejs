@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="/css/main.css"> -->
+    <title>Menu</title>
+</head>
+
+<body>
+    <table class="table">
+        <thead>
+            <tr class="flex-class">
+                <th scope="col">Heading</th>
+                <th scope="col">Text</th>
+                <th scope="col">Date</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%for(let x of noticeList){%>
+            <tr>
+                <td><%= x.heading %></td>
+                <td><%= x.text %></td>
+                <td><%= x.date %></td>
+                <td>
+                    <form action="/admin/notice/<%=x._id%>/delete?_method=DELETE" method="POST" >
+                        <button> Delete </button>
+                    </form>
+                </td>
+            </tr>
+            <%}%>
+        </tbody>
+    </table>
+    <a href="/admin/notice/new"> Add a Notice</a>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Track Complaint</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Merriweather+Sans:wght@700&family=Poppins:wght@700&display=swap');
+    </style>
+    <link rel="stylesheet" href="/css/Complaint_new.css" />
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <!-- #Navbar-->
+    <%- include('partials/navbar')%>
+
+    <!-- /////////////////////////Selection Bar///////////////////// -->
+    <div class="menu_day_list_container">
+        <div class="menu_day_list">
+            <ul>
+                <li><a href="../complaint/new">Create A New Complaint</a></li>
+                <li><a href="../complaint/track">Track your Complaint</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- ////////////////////Complaint Form body////////////////// -->
+    <form action="/complaint/track" method="POST">
+        <div class="form_container">
+            <div class="form-section">
+                <label for="Enrollment_Number"><b>Enrollment Number</b></label>
+                <input type="text" placeholder="Enter your Enrollment Number" name="Enrollment_Number" id="Enrollment_Number" required>
+            </div>
+
+            <div class="set-reset">
+                <input type="submit" value="Submit">
+                <!-- <input type="reset" value="Reset"> -->
+            </div>
+            <br>
+            <br>
+
+        </div>
+    </form>
+
+    
+    <br>
+    <br>
+    <br>
+    
+        <%- include('partials/footer')%>
+</body>
+
+</html>
+</body>
+
+</html>

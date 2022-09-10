@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Track Complaint</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Merriweather+Sans:wght@700&family=Poppins:wght@700&display=swap');
+    </style>
+    <link rel="stylesheet" href="/css/Complaint_new.css" />
+</head>
+
+<body>
+    <!-- #Navbar-->
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Mess Committee</a></li>
+            <li><a href="#">Complaint</a></li>
+            <li><a href="#">FAQ</a></li>
+
+        </ul>
+        <div class="logo"></div>
+    </div>
+
+    <!-- /////////////////////////Selection Bar///////////////////// -->
+    <div class="menu_day_list_container">
+        <div class="menu_day_list">
+            <ul>
+                <li><a href="../complaint/new">Create A New Complaint</a></li>
+                <li><a href="../complaint/Track">Track your Complaint</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- ////////////////////Complaint Form body////////////////// -->
+    <form action="/complaint_folder/track" method="POST">
+        <div class="form_container">
+            <div class="form-section">
+                <label for="Enrollment_Number"><b>Enrollment Number</b></label>
+                <input type="text" placeholder="Enter your Enrollment Number" name="Enrollment_Number" id="Enrollment_Number" value="<%=id%> " required>
+            </div>
+            <br>
+            <br>
+
+        </div>
+    </form>
+
+    <div class="tracking_detail_body">
+        <% for (let complaint of complaints)  {%>
+            <div class="complaint_track_detail">
+                <div class="complaint_row1">
+                    <div class="row_title">
+                        <p>COMPLAINT</p>
+                    </div>
+                    <div class="row_details">
+                        <p><%= complaint.Complaint %> </p>
+                    </div>
+                </div>
+                <div class="complaint_row2">
+                    <div class="row_title">
+                        <p>CATEGORY</p>
+                    </div>
+                    <div class="row_details">
+                        <p><%= complaint.category %> </p>
+                    </div>
+                </div>
+                <div class="complaint_row3">
+                    <div class="row_title">
+                        <p>STATUS</p>
+                    </div>
+                    <div class="row_details">
+                        <p class="<%= complaint.status === "Rejected" ? "red-status" : "green-status" %> "><%= complaint.status %> </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+        <% } %>  
+        
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+    <!-- <div class="footer_main"> -->
+    <div class="footer">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Mess Committee</a></li>
+            <li><a href="#">Complaint</a></li>
+            <li><a href="#">FAQ</a></li>
+
+        </ul>
+
+    </div>
+</body>
+
+</html>

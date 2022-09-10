@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3a4518f943.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        .HTML-Form {
+            width: 500px;
+        }
+    </style>
+    <title>Notice Form</title>
+</head>
+
+<body>
+    <div class="HTML-Form">
+
+        <form action="/index" method="post">
+            <div class="form-group">
+                <label for="notice-heading">Notice Heading</label>
+                <input type="text" class="form-control" id="notice-heading" name="heading" placeholder="Enter notice heading">
+            </div>
+
+
+            <div class="form-group">
+                <label for="notice-text">Notice Text</label>
+                <textarea class="form-control" id="notice-text" name="text" rows="3"></textarea>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
